@@ -7,25 +7,24 @@ public class Main {
 
     // create data structure to store all total scores
     ArrayList<Integer> totalScore = new ArrayList<Integer>();
-    
-    try{
+
+    try {
       Scanner s = new Scanner(new File("total.txt"));
 
-      while(s.hasNext()){
+      while (s.hasNext()) {
         int score = Integer.parseInt(s.nextLine());
         totalScore.add(score);
       }
       s.close();
     }
 
-    catch(Exception e){
+    catch (Exception e) {
       System.out.println("file not found");
     }
 
     // make sure all data entered the ArrayList
-    System.out.println(totalScore);
-    System.out.println(totalScore.size());
-    
+    //System.out.println(totalScore);
+    System.out.println(totalScore.size()+ " students took the test.");
   }
 
 }
